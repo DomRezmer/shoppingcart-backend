@@ -22,4 +22,9 @@ public class RabbitMQSender {
         rabbitTemplate.convertAndSend(exchange, routingkey, shoppingcart);
         System.out.println("Send msg = " + shoppingcart);
     }
+
+    public void send(String message) {
+        rabbitTemplate.convertAndSend(exchange, routingkey, message);
+        System.out.println("Send msg = " + message);
+    } // TODO: change to shoppingcart method
 }

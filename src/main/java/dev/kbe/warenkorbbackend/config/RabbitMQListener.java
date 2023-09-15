@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class RabbitMQListener implements MessageListener {
-
+    // TODO: find out why this consumes its own message??
     public void onMessage(Message message) {
         System.out.println("Received message: " + new String(message.getBody()));
     }
