@@ -46,13 +46,13 @@ public class RabbitMQConfig {
     }
 
     @Bean
-    DirectExchange productExchange() {
+    DirectExchange shoppingcartExchange() {
         return new DirectExchange(exchange);
     }
 
     @Bean
-    Binding binding(Queue productQueue, DirectExchange productExchange) {
-        return BindingBuilder.bind(productQueue).to(productExchange).with(routingkey);
+    Binding binding(Queue shoppingcartQueue, DirectExchange shoppingcartExchange) {
+        return BindingBuilder.bind(shoppingcartQueue).to(shoppingcartExchange).with(routingkey);
     }
 
     @Bean
