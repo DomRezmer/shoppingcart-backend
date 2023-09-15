@@ -31,6 +31,6 @@ public class ShoppingcartController {
     @GetMapping("/test")
     public String sendShoppingcart() {
         rabbitMQSender.send("Hello from RabbitMQ!");
-        return "Message sent to the RabbitMQ JavaInUse Successfully";
+        return "Message sent to the RabbitMQ Successfully";
     }
 }

@@ -21,7 +21,6 @@ import org.springframework.context.annotation.Primary;
 @Configuration
 public class RabbitMQConfig {
     @Value("${rabbitmq.listener.queue}")
-
     String queueName;
 
     public String getQueue() {
