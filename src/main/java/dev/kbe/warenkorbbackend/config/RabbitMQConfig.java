@@ -1,6 +1,7 @@
 package dev.kbe.warenkorbbackend.config;
 
 import org.springframework.amqp.core.Queue;
+
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.listener.MessageListenerContainer;
@@ -11,8 +12,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class RabbitMQConfig {
-
     @Value("${rabbitmq.listener.queue}")
+
     String queueName;
 
     @Value("${rabbitmq.username}")
